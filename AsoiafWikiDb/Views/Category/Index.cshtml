@@ -1,0 +1,19 @@
+﻿@model AsoiafWikiDb.Models.CategoryIndexViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>title</h2>
+
+@{
+    var myChart = new Chart(width: 800, height: 600)
+        .AddTitle("Chart Title")
+        .AddSeries(
+            name: "Default", chartType: "pie",
+            xValue: @Model.Categories.Select(c => c.value).ToList(),
+            yValues: @Model.Categories.Select(c => c.pages).ToList())
+        .AddLegend()
+        .Write();
+}
