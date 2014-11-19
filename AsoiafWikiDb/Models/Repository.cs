@@ -31,7 +31,7 @@
                                 wiki.Query.categorymembers()
                                     .Where(
                                         cm =>
-                                        cm.title == c.value.ToCategoryTitle() && cm.type == categorymemberstype.subcat)
+                                        cm.title == c.value.ToCategoryTitleWithPrefix() && cm.type == categorymemberstype.subcat)
                                     .ToList();
                         }
 

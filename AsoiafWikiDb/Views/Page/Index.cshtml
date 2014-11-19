@@ -1,4 +1,5 @@
-﻿@model AsoiafWikiDb.Models.PageIndexViewModel
+﻿@using AsoiafWikiDb.Models
+@model AsoiafWikiDb.Models.PageIndexViewModel
 
 @{
     ViewBag.Title = "title";
@@ -18,7 +19,7 @@
         {
             <tr>
                 <td>
-                    <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/{0}", page.info.title)">@page.info.title</a>
+                    <a href="@page.info.title.ToWikiPageUri()">@page.info.title</a>
                 </td>
             </tr>
         }

@@ -26,7 +26,7 @@
             {
                 <tr>
                     <td>
-                        <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/category:{0}", category.info.value)">@category.info.value</a>
+                        <a href="@category.info.value.ToWikiPageUri()">@category.info.value</a>
                     </td>
                     <td>@category.info.size</td>
                     <td>@category.info.pages</td>
@@ -37,7 +37,7 @@
                         {
                             foreach (var subCategory in category.subCategories)
                             {
-                                <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/{0}", subCategory.title)">@subCategory.title.Substring(Extensions.CategoryPrefixLength)</a>
+                                <a href="@subCategory.title.ToWikiPageUri()">@subCategory.title.ToCategoryTitleWithoutPrefix()</a>
                             }
                         }
                     </td>
