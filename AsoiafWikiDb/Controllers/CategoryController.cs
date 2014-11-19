@@ -15,11 +15,11 @@
         public ViewResult Index([FromUri]CategoryIndexViewModel vm)
         {
             IEnumerable<allcategoriesSelect> categories = Repository.Instance.Categories;
-            if (vm.HiddenFilter == HiddenFilter.Hidden)
+            if (vm.Hide == Hide.Yes)
             {
                 categories = categories.Where(c => c.hidden);
             }
-            else if (vm.HiddenFilter == HiddenFilter.NoneHidden)
+            else if (vm.Hide == Hide.No)
             {
                 categories = categories.Where(c => !c.hidden);
             }

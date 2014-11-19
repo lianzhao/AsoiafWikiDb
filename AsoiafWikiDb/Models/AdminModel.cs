@@ -9,11 +9,11 @@
         public string Password { get; set; } 
     }
 
-    public enum HiddenFilter
+    public enum Hide
     {
         All = 0,
-        Hidden = 1,
-        NoneHidden = 2,
+        Yes = 1,
+        No = 2,
     }
 
     public enum RedirectFilter
@@ -31,7 +31,7 @@
 
         public bool Desc { get; set; }
 
-        public HiddenFilter HiddenFilter { get; set; }
+        public Hide Hide { get; set; }
 
         public IEnumerable<allcategoriesSelect> Categories { get; set; }
     }
