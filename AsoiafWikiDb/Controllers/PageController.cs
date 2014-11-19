@@ -16,11 +16,11 @@ namespace AsoiafWikiDb.Controllers
         public ViewResult Index([FromUri]PageIndexViewModel vm)
         {
             var pages = Repository.Instance.Pages;
-            if (vm.RedirectFilter == RedirectFilter.Yes)
+            if (vm.Redirect == Models.Redirect.Yes)
             {
                 pages = pages.Where(p => p.info.redirect);
             }
-            else if (vm.RedirectFilter == RedirectFilter.No)
+            else if (vm.Redirect == Models.Redirect.No)
             {
                 pages = pages.Where(p => !p.info.redirect);
             }

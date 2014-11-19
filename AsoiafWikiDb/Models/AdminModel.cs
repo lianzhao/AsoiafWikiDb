@@ -16,7 +16,7 @@
         No = 2,
     }
 
-    public enum RedirectFilter
+    public enum Redirect
     {
         All = 0,
         Yes = 1,
@@ -44,7 +44,7 @@
 
         public bool Desc { get; set; }
 
-        public RedirectFilter RedirectFilter { get; set; }
+        public Redirect Redirect { get; set; }
 
         public IEnumerable<string> Categories { get; set; }
 
