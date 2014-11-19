@@ -27,7 +27,7 @@ namespace AsoiafWikiDb.Controllers
                 pages =
                     pages.Where(
                         p =>
-                        p.categories.Select(c => c.title.Substring(Constants.CategoryPrefixLength)).Intersect(vm.Categories).Count() == count);
+                        p.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(vm.Categories).Count() == count);
             }
 
             if (vm.NotInCategories != null)
@@ -35,7 +35,7 @@ namespace AsoiafWikiDb.Controllers
                 pages =
                     pages.Where(
                         p =>
-                        !p.categories.Select(c => c.title.Substring(Constants.CategoryPrefixLength)).Intersect(vm.NotInCategories).Any());
+                        !p.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(vm.NotInCategories).Any());
             }
 
             if (vm.Top > 0)
