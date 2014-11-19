@@ -1,4 +1,5 @@
-﻿@model AsoiafWikiDb.Models.CategoryIndexViewModel
+﻿@using AsoiafWikiDb.Models
+@model AsoiafWikiDb.Models.CategoryIndexViewModel
 
 @{
     ViewBag.Title = "title";
@@ -25,13 +26,21 @@
             {
                 <tr>
                     <td>
-                        <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/category:{0}", category.value)">@category.value</a>
+                        <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/category:{0}", category.info.value)">@category.info.value</a>
                     </td>
-                    <td>@category.size</td>
-                    <td>@category.pages</td>
-                    <td>@category.files</td>
-                    <td>@category.hidden</td>
-                    <td>@category.subcats</td>
+                    <td>@category.info.size</td>
+                    <td>@category.info.pages</td>
+                    <td>@category.info.files</td>
+                    <td>@category.info.hidden</td>
+                    <td>
+                        @if (category.subCategories != null)
+                        {
+                            foreach (var subCategory in category.subCategories)
+                            {
+                                <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/{0}", subCategory.title)">@subCategory.title.Substring(Extensions.CategoryPrefixLength)</a>
+                            }
+                        }
+                    </td>
                 </tr>
             }
         </tbody>
@@ -43,8 +52,8 @@ else
         .AddTitle("Chart Title")
         .AddSeries(
             name: "Default", chartType: Model.ChartType,
-            xValue: Model.Categories.Select(c => c.value).ToList(),
-            yValues: Model.Categories.Select(c => c.pages).ToList())
+            xValue: Model.Categories.Select(c => c.info.value).ToList(),
+            yValues: Model.Categories.Select(c => c.info.pages).ToList())
         .AddLegend()
         .Write();
 }

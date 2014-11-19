@@ -16,6 +16,6 @@ namespace AsoiafWikiDb.Models
 
         public string ChartType { get; set; }
 
-        public IEnumerable<allcategoriesSelect> Categories { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
     }
 }
