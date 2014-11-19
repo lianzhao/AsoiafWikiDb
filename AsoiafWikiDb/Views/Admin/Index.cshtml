@@ -1,11 +1,11 @@
 ﻿@model AsoiafWikiDb.Models.AdminViewModel
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Admin";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<h2>Refresh DB</h2>
 
 @using (@Html.BeginForm())
 {
@@ -20,6 +20,6 @@
         </div>
     </div>
     <div>
-        <input type="submit" value="Save" class="btn" />
+        <input type="submit" value="Refresh" class="btn btn-primary" />
     </div>
 }
