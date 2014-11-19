@@ -46,13 +46,4 @@
             return this.Pages.Where(p => p.categories.Any(c => categories.Contains(c.title)));
         }
     }
-
-    public class Page
-    {
-        public infoResult info { get; set; }
-
-        public categoryinfoResult categoryinfo { get; set; }
-
-        public IEnumerable<categoriesSelect> categories { get; set; }
-    }
 }

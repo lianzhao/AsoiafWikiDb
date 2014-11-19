@@ -141,7 +141,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminModel.cs" />
+    <Compile Include="Models\CategoryIndexViewModel.cs" />
     <Compile Include="Models\Extensions.cs" />
+    <Compile Include="Models\Hide.cs" />
+    <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\PageIndexViewModel.cs" />
+    <Compile Include="Models\Redirect.cs" />
     <Compile Include="Models\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
