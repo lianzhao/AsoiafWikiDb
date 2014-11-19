@@ -14,7 +14,7 @@
     {
         public ViewResult Index([FromUri]CategoryIndexViewModel vm)
         {
-            IEnumerable<allcategoriesSelect> categories = Repository.Instance.Categories;
+            var categories = Repository.Instance.Categories;
             if (vm.Hide == Hide.Yes)
             {
                 categories = categories.Where(c => c.hidden);
