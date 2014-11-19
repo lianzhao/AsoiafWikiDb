@@ -33,6 +33,8 @@
 
         public Hide Hide { get; set; }
 
+        public string ChartType { get; set; }
+
         public IEnumerable<allcategoriesSelect> Categories { get; set; }
     }
 

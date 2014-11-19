@@ -5,15 +5,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
 
-@{
+@if (string.IsNullOrEmpty(Model.ChartType))
+{<h2>@Model.Categories.Count() categories found</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Category</td>
+                <td>Size</td>
+                <td>Pages</td>
+                <td>Files</td>
+                <td>Hide</td>
+                <td>subcats</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model.Categories)
+            {
+                <tr>
+                    <td>
+                        <a href="@string.Format("http://zh.asoiaf.wikia.com/wiki/category:{0}", category.value)">@category.value</a>
+                    </td>
+                    <td>@category.size</td>
+                    <td>@category.pages</td>
+                    <td>@category.files</td>
+                    <td>@category.hidden</td>
+                    <td>@category.subcats</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
     var myChart = new Chart(width: 800, height: 600)
         .AddTitle("Chart Title")
         .AddSeries(
-            name: "Default", chartType: "pie",
-            xValue: @Model.Categories.Select(c => c.value).ToList(),
-            yValues: @Model.Categories.Select(c => c.pages).ToList())
+            name: "Default", chartType: Model.ChartType,
+            xValue: Model.Categories.Select(c => c.value).ToList(),
+            yValues: Model.Categories.Select(c => c.pages).ToList())
         .AddLegend()
         .Write();
 }
