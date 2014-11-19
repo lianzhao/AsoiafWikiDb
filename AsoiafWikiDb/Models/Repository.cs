@@ -44,10 +44,5 @@
             //            new Page { info = p.info, categoryinfo = p.categoryinfo, categories = p.categories().ToList(), })
             //        .ToList();
         }
-
-        public IEnumerable<Page> GetPagesByCategory(params string[] categories)
-        {
-            return this.Pages.Where(p => p.categories.Any(c => categories.Contains(c.title)));
-        }
     }
 }
