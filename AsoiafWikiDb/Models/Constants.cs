@@ -1,6 +1,8 @@
 ﻿namespace AsoiafWikiDb.Models
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public static class Constants
     {
@@ -37,6 +39,18 @@
         public static string ToWikiPageUri(this string pageTitle)
         {
             return string.Format("{0}{1}", WikiSiteUri, pageTitle);
+        }
+
+        public static bool InAnyCategories(this Page page, IEnumerable<string> categories)
+        {
+            return page.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(categories).Any();
+        }
+
+        public static bool InAllCategories(this Page page, IEnumerable<string> categories)
+        {
+            var count = categories.Count();
+            return page.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(categories).Count()
+                   == count;
         }
     }
 }

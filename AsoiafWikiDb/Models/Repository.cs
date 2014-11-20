@@ -1,10 +1,10 @@
 ﻿namespace AsoiafWikiDb.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
     using LinqToWiki.Generated;
-    using LinqToWiki.Generated.Entities;
 
     public class Repository
     {
@@ -37,12 +37,36 @@
 
                         return category;
                     }).ToList();
-            //this.Pages =
-            //    wiki.Query.allpages()
-            //        .Pages.Select(
-            //            p =>
-            //            new Page { info = p.info, categoryinfo = p.categoryinfo, categories = p.categories().ToList(), })
-            //        .ToList();
+            this.Pages =
+                wiki.Query.allpages()
+                    .Pages.Select(
+                        p =>
+                        new Page { info = p.info, categoryinfo = p.categoryinfo, categories = p.categories().ToList(), })
+                    .ToList();
+        }
+
+        public IEnumerable<Category> GetSubCategories(string title, bool includeAllDescendants = false)
+        {
+            var root =
+                this.Categories.FirstOrDefault(c => c.info.value.Equals(title, StringComparison.OrdinalIgnoreCase));
+            if (root == null)
+            {
+                throw new ArgumentException("no such category");
+            }
+
+            if (root.subCategories == null)
+            {
+                return Enumerable.Empty<Category>();
+            }
+
+            var subCats = root.subCategories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).ToList();
+            var rv = this.Categories.Where(c => subCats.Contains(c.info.value));
+            if (!includeAllDescendants)
+            {
+                return rv;
+            }
+
+            return subCats.Aggregate(rv, (current, subCat) => current.Union(this.GetSubCategories(subCat, true)));
         }
     }
 }

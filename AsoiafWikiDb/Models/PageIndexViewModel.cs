@@ -14,7 +14,11 @@ namespace AsoiafWikiDb.Models
 
         public IEnumerable<string> Categories { get; set; }
 
+        public IEnumerable<string> ImplicitCategories { get; set; }
+
         public IEnumerable<string> NotInCategories { get; set; }
+
+        public IEnumerable<string> NotInImplicitCategories { get; set; }
 
         public IEnumerable<Page> Pages { get; set; }
     }

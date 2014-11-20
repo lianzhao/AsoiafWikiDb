@@ -23,19 +23,38 @@ namespace AsoiafWikiDb.Controllers
 
             if (vm.Categories != null)
             {
-                var count = vm.Categories.Count();
-                pages =
-                    pages.Where(
-                        p =>
-                        p.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(vm.Categories).Count() == count);
+                pages = pages.Where(p => p.InAllCategories(vm.Categories));
             }
 
             if (vm.NotInCategories != null)
             {
-                pages =
-                    pages.Where(
-                        p =>
-                        !p.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(vm.NotInCategories).Any());
+                pages = pages.Where(p => !p.InAnyCategories(vm.Categories));
+            }
+
+            if (vm.ImplicitCategories != null)
+            {
+                var categories =
+                    vm.ImplicitCategories.SelectMany(
+                        c =>
+                        Repository.Instance.GetSubCategories(c, includeAllDescendants: true))
+                        .Distinct()
+                        .Select(c => c.info.value.ToCategoryTitleWithoutPrefix())
+                        .Union(vm.ImplicitCategories)
+                        .ToList();
+                pages = pages.Where(p => p.InAnyCategories(categories));
+            }
+
+            if (vm.NotInImplicitCategories != null)
+            {
+                var categories =
+                    vm.NotInImplicitCategories.SelectMany(
+                        c =>
+                        Repository.Instance.GetSubCategories(c, includeAllDescendants: true))
+                        .Distinct()
+                        .Select(c => c.info.value.ToCategoryTitleWithoutPrefix())
+                        .Union(vm.NotInImplicitCategories)
+                        .ToList();
+                pages = pages.Where(p => !p.InAnyCategories(categories));
             }
 
             if (vm.Top > 0)
