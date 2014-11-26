@@ -21,6 +21,16 @@
                 categories = categories.Where(c => !c.info.hidden);
             }
 
+            if (vm.MinSize > 0)
+            {
+                categories = categories.Where(c => c.info.size >= vm.MinSize);
+            }
+
+            if (vm.MaxSize > 0)
+            {
+                categories = categories.Where(c => c.info.size <= vm.MaxSize);
+            }
+
             if (!string.IsNullOrEmpty(vm.OrderBy))
             {
                 if (vm.OrderBy.Equals("pages", StringComparison.InvariantCultureIgnoreCase))

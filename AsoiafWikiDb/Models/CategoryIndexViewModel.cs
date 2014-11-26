@@ -16,6 +16,10 @@ namespace AsoiafWikiDb.Models
 
         public string ChartType { get; set; }
 
+        public int MinSize { get; set; }
+
+        public int MaxSize { get; set; }
+
         public IEnumerable<Category> Categories { get; set; }
     }
 }
