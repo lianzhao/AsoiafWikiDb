@@ -51,7 +51,16 @@
                 this.Categories.FirstOrDefault(c => c.info.value.Equals(title, StringComparison.OrdinalIgnoreCase));
             if (root == null)
             {
-                throw new ArgumentException("no such category");
+                // 这里本应 throw new ArgumentException("no such category");
+                // 但维基里有一些特殊分类，它属于某上级分类的子分类，但它不在所有分类中，导致root为空
+                // 目前已知的这种分类包括：
+                // 1. Category:拉扎林人物，它是Category:东大陆人物的子分类
+                // 2. Category:罗拉斯人物，它是Category:自由贸易城邦人物的子分类
+                // 猜测其共通的特性为
+                // 1. 它有上级分类
+                // 2. 本身不包含任何page、file或者subcat
+                // 3. 本身是一个page
+                return Enumerable.Empty<Category>();
             }
 
             if (root.subCategories == null)
