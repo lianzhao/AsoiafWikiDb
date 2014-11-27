@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LinqToWiki.Core">
-      <HintPath>lib\LinqToWiki.Core.dll</HintPath>
+    <Reference Include="IQToolkit">
+      <HintPath>..\packages\LinqToWiki.Core.1.2.0\Lib\net40-client\IQToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToWiki.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\LinqToWiki.Core.1.2.0\Lib\net40-client\LinqToWiki.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -242,6 +249,9 @@
     <Compile Include="1watchlistraw.cs" />
     <Compile Include="2watchlistraw.cs" />
     <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
