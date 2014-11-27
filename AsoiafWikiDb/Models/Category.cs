@@ -9,5 +9,7 @@
         public allcategoriesSelect info { get; set; }
 
         public IEnumerable<categorymembersSelect> subCategories { get; set; }
+
+        public Page Page { get; set; }
     }
 }

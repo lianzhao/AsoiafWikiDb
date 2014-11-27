@@ -11,5 +11,7 @@
         public categoryinfoResult categoryinfo { get; set; }
 
         public IEnumerable<categoriesSelect> categories { get; set; }
+
+        public IEnumerable<langlinksSelect> langlinks { get; set; }
     }
 }

@@ -34,7 +34,7 @@ namespace LinqToWiki.Generated.Entities
     /// The namespace to enumerate
     /// 
     /// </summary>
-    public Namespace ns { get; private set; }
+    public Namespace @namespace { get; private set; }
 
     /// <summary>
     /// Which pages to list

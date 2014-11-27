@@ -12,6 +12,7 @@
     <thead>
         <tr>
             <td>Page</td>
+            <td>langlinks</td>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,20 @@
             <tr>
                 <td>
                     <a href="@page.info.title.ToWikiPageUri()">@page.info.title</a>
+                <td>
+                    @if (page.langlinks != null)
+                    {
+                        foreach (var ll in page.langlinks)
+                        {
+                            var url = ll.GetUri();
+                            if (!string.IsNullOrEmpty(url))
+                            {
+                                <a href="@url">@ll.lang: @ll.value</a>
+                            }
+                        }
+                    }
+                </td>
+
                 </td>
             </tr>
         }

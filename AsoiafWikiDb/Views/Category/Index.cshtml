@@ -19,6 +19,7 @@
                 <td>Files</td>
                 <td>Hide</td>
                 <td>subcats</td>
+                <td>langlinks</td>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +39,19 @@
                             foreach (var subCategory in category.subCategories)
                             {
                                 <a href="@subCategory.title.ToWikiPageUri()">@subCategory.title.ToCategoryTitleWithoutPrefix()</a>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @if (category.Page != null && category.Page.langlinks != null)
+                        {
+                            foreach (var ll in category.Page.langlinks)
+                            {
+                                var url = ll.GetUri();
+                                if (!string.IsNullOrEmpty(url))
+                                {
+                                    <a href="@url">@ll.lang: @ll.value.ToCategoryTitleWithoutPrefix()</a>
+                                }
                             }
                         }
                     </td>

@@ -45,9 +45,6 @@
     <Reference Include="LinqToWiki.Core">
       <HintPath>..\packages\LinqToWiki.Core.1.2.0\Lib\net40-client\LinqToWiki.Core.dll</HintPath>
     </Reference>
-    <Reference Include="LinqToWiki.Generated">
-      <HintPath>..\packages\LinqToWiki.1.4.1\Lib\net40-client\LinqToWiki.Generated.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
@@ -200,6 +197,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinqToWiki.Generated\LinqToWiki.Generated.csproj">
+      <Project>{96B4811F-08AD-469E-9AF6-757AAFBCBCD1}</Project>
+      <Name>LinqToWiki.Generated</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

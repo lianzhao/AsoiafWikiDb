@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    using LinqToWiki.Generated.Entities;
+
     public static class Constants
     {
         public const string WikiSiteUri = "http://zh.asoiaf.wikia.com/wiki/";
@@ -51,6 +53,15 @@
             var count = categories.Count();
             return page.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Intersect(categories).Count()
                    == count;
+        }
+
+        public static string GetUri(this langlinksSelect langlink)
+        {
+            if (langlink.lang == "en")
+            {
+                return string.Format("{0}{1}", "http://awoiaf.westeros.org/index.php/", langlink.value);
+            }
+            return null;
         }
     }
 }
