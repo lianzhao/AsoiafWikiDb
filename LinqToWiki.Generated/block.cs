@@ -83,7 +83,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("user: {0}; userID: {1}; expiry: {2}; id: {3}; reason: {4}; anononly: {5}; nocreate: {6}; autoblock: {7}; noemail: {8}; hidename: {9}; allowusertalk: {10}; watchuser: {11}", (object) this.user, (object) this.userID, (object) this.expiry, (object) this.id, (object) this.reason, (object) (bool) (this.anononly ? 1 : 0), (object) (bool) (this.nocreate ? 1 : 0), (object) (bool) (this.autoblock ? 1 : 0), (object) (bool) (this.noemail ? 1 : 0), (object) (bool) (this.hidename ? 1 : 0), (object) (bool) (this.allowusertalk ? 1 : 0), (object) (bool) (this.watchuser ? 1 : 0));
+      return string.Format("user: {0}; userID: {1}; expiry: {2}; id: {3}; reason: {4}; anononly: {5}; nocreate: {6}; autoblock: {7}; noemail: {8}; hidename: {9}; allowusertalk: {10}; watchuser: {11}", (object) this.user, (object) this.userID, (object) this.expiry, (object) this.id, (object) this.reason, (this.anononly ? 1 : 0), (this.nocreate ? 1 : 0), (this.autoblock ? 1 : 0), (this.noemail ? 1 : 0), (this.hidename ? 1 : 0), (this.allowusertalk ? 1 : 0), (this.watchuser ? 1 : 0));
     }
   }
 }

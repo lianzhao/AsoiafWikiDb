@@ -115,7 +115,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("userid: {0}; user: {1}; userhidden: {2}; pageid: {3}; revid: {4}; parentid: {5}; ns: {6}; title: {7}; timestamp: {8}; new: {9}; minor: {10}; top: {11}; commenthidden: {12}; comment: {13}; parsedcomment: {14}; patrolled: {15}; size: {16}; sizediff: {17}", (object) this.userid, (object) this.user, (object) (bool) (this.userhidden ? 1 : 0), (object) this.pageid, (object) this.revid, (object) this.parentid, (object) this.ns, (object) this.title, (object) this.timestamp, (object) (bool) (this.@new ? 1 : 0), (object) (bool) (this.minor ? 1 : 0), (object) (bool) (this.top ? 1 : 0), (object) (bool) (this.commenthidden ? 1 : 0), (object) this.comment, (object) this.parsedcomment, (object) (bool) (this.patrolled ? 1 : 0), (object) this.size, (object) this.sizediff);
+      return string.Format("userid: {0}; user: {1}; userhidden: {2}; pageid: {3}; revid: {4}; parentid: {5}; ns: {6}; title: {7}; timestamp: {8}; new: {9}; minor: {10}; top: {11}; commenthidden: {12}; comment: {13}; parsedcomment: {14}; patrolled: {15}; size: {16}; sizediff: {17}", (object) this.userid, (object) this.user, (this.userhidden ? 1 : 0), (object) this.pageid, (object) this.revid, (object) this.parentid, (object) this.ns, (object) this.title, (object) this.timestamp, (this.@new ? 1 : 0), (this.minor ? 1 : 0), (this.top ? 1 : 0), (this.commenthidden ? 1 : 0), (object) this.comment, (object) this.parsedcomment, (this.patrolled ? 1 : 0), (object) this.size, (object) this.sizediff);
     }
   }
 }

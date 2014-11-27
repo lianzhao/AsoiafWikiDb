@@ -105,7 +105,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("userid: {0}; name: {1}; invalid: {2}; hidden: {3}; interwiki: {4}; missing: {5}; userrightstoken: {6}; editcount: {7}; registration: {8}; blockid: {9}; blockedby: {10}; blockedbyid: {11}; blockedreason: {12}; blockedexpiry: {13}; emailable: {14}; gender: {15}", (object) this.userid, (object) this.name, (object) (bool) (this.invalid ? 1 : 0), (object) (bool) (this.hidden ? 1 : 0), (object) (bool) (this.interwiki ? 1 : 0), (object) (bool) (this.missing ? 1 : 0), (object) this.userrightstoken, (object) this.editcount, (object) this.registration, (object) this.blockid, (object) this.blockedby, (object) this.blockedbyid, (object) this.blockedreason, (object) this.blockedexpiry, (object) (bool) (this.emailable ? 1 : 0), (object) this.gender);
+      return string.Format("userid: {0}; name: {1}; invalid: {2}; hidden: {3}; interwiki: {4}; missing: {5}; userrightstoken: {6}; editcount: {7}; registration: {8}; blockid: {9}; blockedby: {10}; blockedbyid: {11}; blockedreason: {12}; blockedexpiry: {13}; emailable: {14}; gender: {15}", (object) this.userid, (object) this.name, (this.invalid ? 1 : 0), (this.hidden ? 1 : 0), (this.interwiki ? 1 : 0), (this.missing ? 1 : 0), (object) this.userrightstoken, (object) this.editcount, (object) this.registration, (object) this.blockid, (object) this.blockedby, (object) this.blockedbyid, (object) this.blockedreason, (object) this.blockedexpiry, (this.emailable ? 1 : 0), (object) this.gender);
     }
   }
 }

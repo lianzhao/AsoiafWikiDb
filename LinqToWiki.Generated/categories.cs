@@ -55,7 +55,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("ns: {0}; title: {1}; sortkey: {2}; sortkeyprefix: {3}; timestamp: {4}; hidden: {5}", (object) this.ns, (object) this.title, (object) this.sortkey, (object) this.sortkeyprefix, (object) this.timestamp, (object) (bool) (this.hidden ? 1 : 0));
+      return string.Format("ns: {0}; title: {1}; sortkey: {2}; sortkeyprefix: {3}; timestamp: {4}; hidden: {5}", (object) this.ns, (object) this.title, (object) this.sortkey, (object) this.sortkeyprefix, (object) this.timestamp, (this.hidden ? 1 : 0));
     }
   }
 }

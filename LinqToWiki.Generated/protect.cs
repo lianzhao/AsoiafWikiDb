@@ -38,7 +38,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("title: {0}; reason: {1}; cascade: {2}", (object) this.title, (object) this.reason, (object) (bool) (this.cascade ? 1 : 0));
+      return string.Format("title: {0}; reason: {1}; cascade: {2}", (object) this.title, (object) this.reason, (this.cascade ? 1 : 0));
     }
   }
 }

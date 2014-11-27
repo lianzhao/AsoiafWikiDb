@@ -64,7 +64,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("new: {0}; result: {1}; pageid: {2}; title: {3}; nochange: {4}; oldrevid: {5}; newrevid: {6}; newtimestamp: {7}", (object) (bool) (this.@new ? 1 : 0), (object) this.result, (object) this.pageid, (object) this.title, (object) (bool) (this.nochange ? 1 : 0), (object) this.oldrevid, (object) this.newrevid, (object) this.newtimestamp);
+      return string.Format("new: {0}; result: {1}; pageid: {2}; title: {3}; nochange: {4}; oldrevid: {5}; newrevid: {6}; newtimestamp: {7}", (this.@new ? 1 : 0), (object) this.result, (object) this.pageid, (object) this.title, (this.nochange ? 1 : 0), (object) this.oldrevid, (object) this.newrevid, (object) this.newtimestamp);
     }
   }
 }

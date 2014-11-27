@@ -90,7 +90,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("ns: {0}; title: {1}; snippet: {2}; size: {3}; wordcount: {4}; timestamp: {5}; score: {6}; titlesnippet: {7}; redirecttitle: {8}; redirectsnippet: {9}; sectiontitle: {10}; sectionsnippet: {11}; hasrelated: {12}", (object) this.ns, (object) this.title, (object) this.snippet, (object) this.size, (object) this.wordcount, (object) this.timestamp, (object) this.score, (object) this.titlesnippet, (object) this.redirecttitle, (object) this.redirectsnippet, (object) this.sectiontitle, (object) this.sectionsnippet, (object) (bool) (this.hasrelated ? 1 : 0));
+      return string.Format("ns: {0}; title: {1}; snippet: {2}; size: {3}; wordcount: {4}; timestamp: {5}; score: {6}; titlesnippet: {7}; redirecttitle: {8}; redirectsnippet: {9}; sectiontitle: {10}; sectionsnippet: {11}; hasrelated: {12}", (object) this.ns, (object) this.title, (object) this.snippet, (object) this.size, (object) this.wordcount, (object) this.timestamp, (object) this.score, (object) this.titlesnippet, (object) this.redirecttitle, (object) this.redirectsnippet, (object) this.sectiontitle, (object) this.sectionsnippet, (this.hasrelated ? 1 : 0));
     }
   }
 }

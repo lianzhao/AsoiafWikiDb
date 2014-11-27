@@ -74,7 +74,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("ns: {0}; title: {1}; pageid: {2}; revid: {3}; invalid: {4}; special: {5}; missing: {6}; purged: {7}; linkupdate: {8}; iw: {9}", (object) this.ns, (object) this.title, (object) this.pageid, (object) this.revid, (object) (bool) (this.invalid ? 1 : 0), (object) (bool) (this.special ? 1 : 0), (object) (bool) (this.missing ? 1 : 0), (object) (bool) (this.purged ? 1 : 0), (object) (bool) (this.linkupdate ? 1 : 0), (object) this.iw);
+      return string.Format("ns: {0}; title: {1}; pageid: {2}; revid: {3}; invalid: {4}; special: {5}; missing: {6}; purged: {7}; linkupdate: {8}; iw: {9}", (object) this.ns, (object) this.title, (object) this.pageid, (object) this.revid, (this.invalid ? 1 : 0), (this.special ? 1 : 0), (this.missing ? 1 : 0), (this.purged ? 1 : 0), (this.linkupdate ? 1 : 0), (object) this.iw);
     }
   }
 }

@@ -52,7 +52,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("value: {0}; size: {1}; pages: {2}; files: {3}; subcats: {4}; hidden: {5}", (object) this.value, (object) this.size, (object) this.pages, (object) this.files, (object) this.subcats, (object) (bool) (this.hidden ? 1 : 0));
+      return string.Format("value: {0}; size: {1}; pages: {2}; files: {3}; subcats: {4}; hidden: {5}", (object) this.value, (object) this.size, (object) this.pages, (object) this.files, (object) this.subcats, (this.hidden ? 1 : 0));
     }
   }
 }

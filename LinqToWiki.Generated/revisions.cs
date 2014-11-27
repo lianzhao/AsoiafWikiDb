@@ -114,7 +114,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("rollbacktoken: {0}; revid: {1}; parentid: {2}; minor: {3}; userhidden: {4}; user: {5}; anon: {6}; userid: {7}; timestamp: {8}; size: {9}; sha1: {10}; commenthidden: {11}; comment: {12}; parsedcomment: {13}; value: {14}; texthidden: {15}; textmissing: {16}; contentmodel: {17}", (object) this.rollbacktoken, (object) this.revid, (object) this.parentid, (object) (bool) (this.minor ? 1 : 0), (object) (bool) (this.userhidden ? 1 : 0), (object) this.user, (object) (bool) (this.anon ? 1 : 0), (object) this.userid, (object) this.timestamp, (object) this.size, (object) this.sha1, (object) (bool) (this.commenthidden ? 1 : 0), (object) this.comment, (object) this.parsedcomment, (object) this.value, (object) (bool) (this.texthidden ? 1 : 0), (object) (bool) (this.textmissing ? 1 : 0), (object) this.contentmodel);
+      return string.Format("rollbacktoken: {0}; revid: {1}; parentid: {2}; minor: {3}; userhidden: {4}; user: {5}; anon: {6}; userid: {7}; timestamp: {8}; size: {9}; sha1: {10}; commenthidden: {11}; comment: {12}; parsedcomment: {13}; value: {14}; texthidden: {15}; textmissing: {16}; contentmodel: {17}", (object) this.rollbacktoken, (object) this.revid, (object) this.parentid, (this.minor ? 1 : 0), (this.userhidden ? 1 : 0), (object) this.user, (this.anon ? 1 : 0), (object) this.userid, (object) this.timestamp, (object) this.size, (object) this.sha1, (this.commenthidden ? 1 : 0), (object) this.comment, (object) this.parsedcomment, (object) this.value, (this.texthidden ? 1 : 0), (this.textmissing ? 1 : 0), (object) this.contentmodel);
     }
   }
 }

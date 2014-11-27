@@ -73,7 +73,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("from: {0}; to: {1}; reason: {2}; redirectcreated: {3}; moveoverredirect: {4}; talkfrom: {5}; talkto: {6}; talkmoveoverredirect: {7}; talkmove_error_code: {8}; talkmove_error_info: {9}", (object) this.from, (object) this.to, (object) this.reason, (object) (bool) (this.redirectcreated ? 1 : 0), (object) (bool) (this.moveoverredirect ? 1 : 0), (object) this.talkfrom, (object) this.talkto, (object) (bool) (this.talkmoveoverredirect ? 1 : 0), (object) this.talkmove_error_code, (object) this.talkmove_error_info);
+      return string.Format("from: {0}; to: {1}; reason: {2}; redirectcreated: {3}; moveoverredirect: {4}; talkfrom: {5}; talkto: {6}; talkmoveoverredirect: {7}; talkmove_error_code: {8}; talkmove_error_info: {9}", (object) this.from, (object) this.to, (object) this.reason, (this.redirectcreated ? 1 : 0), (this.moveoverredirect ? 1 : 0), (object) this.talkfrom, (object) this.talkto, (this.talkmoveoverredirect ? 1 : 0), (object) this.talkmove_error_code, (object) this.talkmove_error_info);
     }
   }
 }

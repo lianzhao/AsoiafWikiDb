@@ -109,7 +109,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("id: {0}; user: {1}; userid: {2}; by: {3}; byid: {4}; timestamp: {5}; expiry: {6}; reason: {7}; rangestart: {8}; rangeend: {9}; automatic: {10}; anononly: {11}; nocreate: {12}; autoblock: {13}; noemail: {14}; hidden: {15}; allowusertalk: {16}", (object) this.id, (object) this.user, (object) this.userid, (object) this.by, (object) this.byid, (object) this.timestamp, (object) this.expiry, (object) this.reason, (object) this.rangestart, (object) this.rangeend, (object) (bool) (this.automatic ? 1 : 0), (object) (bool) (this.anononly ? 1 : 0), (object) (bool) (this.nocreate ? 1 : 0), (object) (bool) (this.autoblock ? 1 : 0), (object) (bool) (this.noemail ? 1 : 0), (object) (bool) (this.hidden ? 1 : 0), (object) (bool) (this.allowusertalk ? 1 : 0));
+      return string.Format("id: {0}; user: {1}; userid: {2}; by: {3}; byid: {4}; timestamp: {5}; expiry: {6}; reason: {7}; rangestart: {8}; rangeend: {9}; automatic: {10}; anononly: {11}; nocreate: {12}; autoblock: {13}; noemail: {14}; hidden: {15}; allowusertalk: {16}", (object) this.id, (object) this.user, (object) this.userid, (object) this.by, (object) this.byid, (object) this.timestamp, (object) this.expiry, (object) this.reason, (object) this.rangestart, (object) this.rangeend, (this.automatic ? 1 : 0), (this.anononly ? 1 : 0), (this.nocreate ? 1 : 0), (this.autoblock ? 1 : 0), (this.noemail ? 1 : 0), (this.hidden ? 1 : 0), (this.allowusertalk ? 1 : 0));
     }
   }
 }

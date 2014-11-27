@@ -101,7 +101,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("logid: {0}; pageid: {1}; ns: {2}; title: {3}; type: {4}; action: {5}; actionhidden: {6}; userhidden: {7}; user: {8}; anon: {9}; userid: {10}; timestamp: {11}; commenthidden: {12}; comment: {13}; parsedcomment: {14}", (object) this.logid, (object) this.pageid, (object) this.ns, (object) this.title, (object) this.type, (object) this.action, (object) (bool) (this.actionhidden ? 1 : 0), (object) (bool) (this.userhidden ? 1 : 0), (object) this.user, (object) (bool) (this.anon ? 1 : 0), (object) this.userid, (object) this.timestamp, (object) (bool) (this.commenthidden ? 1 : 0), (object) this.comment, (object) this.parsedcomment);
+      return string.Format("logid: {0}; pageid: {1}; ns: {2}; title: {3}; type: {4}; action: {5}; actionhidden: {6}; userhidden: {7}; user: {8}; anon: {9}; userid: {10}; timestamp: {11}; commenthidden: {12}; comment: {13}; parsedcomment: {14}", (object) this.logid, (object) this.pageid, (object) this.ns, (object) this.title, (object) this.type, (object) this.action, (this.actionhidden ? 1 : 0), (this.userhidden ? 1 : 0), (object) this.user, (this.anon ? 1 : 0), (object) this.userid, (object) this.timestamp, (this.commenthidden ? 1 : 0), (object) this.comment, (object) this.parsedcomment);
     }
   }
 }

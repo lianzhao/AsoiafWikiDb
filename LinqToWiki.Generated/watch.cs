@@ -43,7 +43,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("title: {0}; unwatched: {1}; watched: {2}; message: {3}", (object) this.title, (object) (bool) (this.unwatched ? 1 : 0), (object) (bool) (this.watched ? 1 : 0), (object) this.message);
+      return string.Format("title: {0}; unwatched: {1}; watched: {2}; message: {3}", (object) this.title, (this.unwatched ? 1 : 0), (this.watched ? 1 : 0), (object) this.message);
     }
   }
 }

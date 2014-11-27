@@ -48,7 +48,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("size: {0}; pages: {1}; files: {2}; subcats: {3}; hidden: {4}", (object) this.size, (object) this.pages, (object) this.files, (object) this.subcats, (object) (bool) (this.hidden ? 1 : 0));
+      return string.Format("size: {0}; pages: {1}; files: {2}; subcats: {3}; hidden: {4}", (object) this.size, (object) this.pages, (object) this.files, (object) this.subcats, (this.hidden ? 1 : 0));
     }
   }
 }

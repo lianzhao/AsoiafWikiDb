@@ -44,7 +44,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("user: {0}; locked: {1}; hidden: {2}; reason: {3}", (object) this.user, (object) (bool) (this.locked ? 1 : 0), (object) this.hidden, (object) this.reason);
+      return string.Format("user: {0}; locked: {1}; hidden: {2}; reason: {3}", (object) this.user, (this.locked ? 1 : 0), (object) this.hidden, (object) this.reason);
     }
   }
 }

@@ -78,7 +78,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("userid: {0}; name: {1}; recenteditcount: {2}; blockid: {3}; blockedby: {4}; blockedbyid: {5}; blockedreason: {6}; blockedexpiry: {7}; hidden: {8}; editcount: {9}; registration: {10}", (object) this.userid, (object) this.name, (object) this.recenteditcount, (object) this.blockid, (object) this.blockedby, (object) this.blockedbyid, (object) this.blockedreason, (object) this.blockedexpiry, (object) (bool) (this.hidden ? 1 : 0), (object) this.editcount, (object) this.registration);
+      return string.Format("userid: {0}; name: {1}; recenteditcount: {2}; blockid: {3}; blockedby: {4}; blockedbyid: {5}; blockedreason: {6}; blockedexpiry: {7}; hidden: {8}; editcount: {9}; registration: {10}", (object) this.userid, (object) this.name, (object) this.recenteditcount, (object) this.blockid, (object) this.blockedby, (object) this.blockedbyid, (object) this.blockedreason, (object) this.blockedexpiry, (this.hidden ? 1 : 0), (object) this.editcount, (object) this.registration);
     }
   }
 }

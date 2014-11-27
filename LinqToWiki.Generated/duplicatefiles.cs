@@ -44,7 +44,7 @@ namespace LinqToWiki.Generated.Entities
 
     public override string ToString()
     {
-      return string.Format("name: {0}; user: {1}; timestamp: {2}; shared: {3}", (object) this.name, (object) this.user, (object) this.timestamp, (object) (bool) (this.shared ? 1 : 0));
+      return string.Format("name: {0}; user: {1}; timestamp: {2}; shared: {3}", (object) this.name, (object) this.user, (object) this.timestamp, (this.shared ? 1 : 0));
     }
   }
 }
