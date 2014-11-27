@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\work\my\AsoiafWikiDb\AsoiafWikiDb\bin\LinqToWiki.Generated.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96B4811F-08AD-469E-9AF6-757AAFBCBCD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>LinqToWiki.Generated</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>LinqToWiki.Generated</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqToWiki.Core">
+      <HintPath>lib\LinqToWiki.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Page.cs" />
+    <Compile Include="Wiki.cs" />
+    <Compile Include="QueryAction.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="1Enums.cs" />
+    <Compile Include="2Enums.cs" />
+    <Compile Include="3Enums.cs" />
+    <Compile Include="4Enums.cs" />
+    <Compile Include="5Enums.cs" />
+    <Compile Include="6Enums.cs" />
+    <Compile Include="7Enums.cs" />
+    <Compile Include="8Enums.cs" />
+    <Compile Include="9Enums.cs" />
+    <Compile Include="10Enums.cs" />
+    <Compile Include="11Enums.cs" />
+    <Compile Include="12Enums.cs" />
+    <Compile Include="13Enums.cs" />
+    <Compile Include="14Enums.cs" />
+    <Compile Include="15Enums.cs" />
+    <Compile Include="16Enums.cs" />
+    <Compile Include="17Enums.cs" />
+    <Compile Include="18Enums.cs" />
+    <Compile Include="19Enums.cs" />
+    <Compile Include="20Enums.cs" />
+    <Compile Include="21Enums.cs" />
+    <Compile Include="22Enums.cs" />
+    <Compile Include="23Enums.cs" />
+    <Compile Include="24Enums.cs" />
+    <Compile Include="25Enums.cs" />
+    <Compile Include="26Enums.cs" />
+    <Compile Include="27Enums.cs" />
+    <Compile Include="28Enums.cs" />
+    <Compile Include="29Enums.cs" />
+    <Compile Include="30Enums.cs" />
+    <Compile Include="31Enums.cs" />
+    <Compile Include="32Enums.cs" />
+    <Compile Include="33Enums.cs" />
+    <Compile Include="34Enums.cs" />
+    <Compile Include="35Enums.cs" />
+    <Compile Include="36Enums.cs" />
+    <Compile Include="37Enums.cs" />
+    <Compile Include="38Enums.cs" />
+    <Compile Include="39Enums.cs" />
+    <Compile Include="40Enums.cs" />
+    <Compile Include="41Enums.cs" />
+    <Compile Include="42Enums.cs" />
+    <Compile Include="43Enums.cs" />
+    <Compile Include="44Enums.cs" />
+    <Compile Include="45Enums.cs" />
+    <Compile Include="46Enums.cs" />
+    <Compile Include="47Enums.cs" />
+    <Compile Include="48Enums.cs" />
+    <Compile Include="49Enums.cs" />
+    <Compile Include="50Enums.cs" />
+    <Compile Include="51Enums.cs" />
+    <Compile Include="52Enums.cs" />
+    <Compile Include="53Enums.cs" />
+    <Compile Include="54Enums.cs" />
+    <Compile Include="55Enums.cs" />
+    <Compile Include="56Enums.cs" />
+    <Compile Include="57Enums.cs" />
+    <Compile Include="58Enums.cs" />
+    <Compile Include="59Enums.cs" />
+    <Compile Include="60Enums.cs" />
+    <Compile Include="61Enums.cs" />
+    <Compile Include="PageResult`1.cs" />
+    <Compile Include="PageResult.cs" />
+    <Compile Include="block.cs" />
+    <Compile Include="compare.cs" />
+    <Compile Include="delete.cs" />
+    <Compile Include="deleteglobalaccount.cs" />
+    <Compile Include="edit.cs" />
+    <Compile Include="emailuser.cs" />
+    <Compile Include="expandtemplates.cs" />
+    <Compile Include="filerevert.cs" />
+    <Compile Include="import.cs" />
+    <Compile Include="login.cs" />
+    <Compile Include="move.cs" />
+    <Compile Include="options.cs" />
+    <Compile Include="patrol.cs" />
+    <Compile Include="protect.cs" />
+    <Compile Include="purge.cs" />
+    <Compile Include="rollback.cs" />
+    <Compile Include="setglobalaccountstatus.cs" />
+    <Compile Include="setnotificationtimestamp.cs" />
+    <Compile Include="tokens.cs" />
+    <Compile Include="unblock.cs" />
+    <Compile Include="undelete.cs" />
+    <Compile Include="upload.cs" />
+    <Compile Include="watch.cs" />
+    <Compile Include="allcategories.cs" />
+    <Compile Include="1allcategories.cs" />
+    <Compile Include="2allcategories.cs" />
+    <Compile Include="allimages.cs" />
+    <Compile Include="1allimages.cs" />
+    <Compile Include="2allimages.cs" />
+    <Compile Include="alllinks.cs" />
+    <Compile Include="1alllinks.cs" />
+    <Compile Include="2alllinks.cs" />
+    <Compile Include="allmessages.cs" />
+    <Compile Include="1allmessages.cs" />
+    <Compile Include="allpages.cs" />
+    <Compile Include="1allpages.cs" />
+    <Compile Include="2allpages.cs" />
+    <Compile Include="alltransclusions.cs" />
+    <Compile Include="1alltransclusions.cs" />
+    <Compile Include="2alltransclusions.cs" />
+    <Compile Include="allusers.cs" />
+    <Compile Include="1allusers.cs" />
+    <Compile Include="2allusers.cs" />
+    <Compile Include="backlinks.cs" />
+    <Compile Include="1backlinks.cs" />
+    <Compile Include="2backlinks.cs" />
+    <Compile Include="blocks.cs" />
+    <Compile Include="1blocks.cs" />
+    <Compile Include="2blocks.cs" />
+    <Compile Include="categories.cs" />
+    <Compile Include="1categories.cs" />
+    <Compile Include="2categories.cs" />
+    <Compile Include="categoryinfo.cs" />
+    <Compile Include="categorymembers.cs" />
+    <Compile Include="1categorymembers.cs" />
+    <Compile Include="2categorymembers.cs" />
+    <Compile Include="deletedrevs.cs" />
+    <Compile Include="1deletedrevs.cs" />
+    <Compile Include="2deletedrevs.cs" />
+    <Compile Include="duplicatefiles.cs" />
+    <Compile Include="1duplicatefiles.cs" />
+    <Compile Include="2duplicatefiles.cs" />
+    <Compile Include="embeddedin.cs" />
+    <Compile Include="1embeddedin.cs" />
+    <Compile Include="2embeddedin.cs" />
+    <Compile Include="extlinks.cs" />
+    <Compile Include="1extlinks.cs" />
+    <Compile Include="exturlusage.cs" />
+    <Compile Include="1exturlusage.cs" />
+    <Compile Include="filearchive.cs" />
+    <Compile Include="1filearchive.cs" />
+    <Compile Include="2filearchive.cs" />
+    <Compile Include="imageinfo.cs" />
+    <Compile Include="1imageinfo.cs" />
+    <Compile Include="images.cs" />
+    <Compile Include="1images.cs" />
+    <Compile Include="2images.cs" />
+    <Compile Include="imageusage.cs" />
+    <Compile Include="1imageusage.cs" />
+    <Compile Include="2imageusage.cs" />
+    <Compile Include="info.cs" />
+    <Compile Include="iwbacklinks.cs" />
+    <Compile Include="1iwbacklinks.cs" />
+    <Compile Include="2iwbacklinks.cs" />
+    <Compile Include="iwlinks.cs" />
+    <Compile Include="1iwlinks.cs" />
+    <Compile Include="2iwlinks.cs" />
+    <Compile Include="langbacklinks.cs" />
+    <Compile Include="1langbacklinks.cs" />
+    <Compile Include="2langbacklinks.cs" />
+    <Compile Include="langlinks.cs" />
+    <Compile Include="1langlinks.cs" />
+    <Compile Include="2langlinks.cs" />
+    <Compile Include="links.cs" />
+    <Compile Include="1links.cs" />
+    <Compile Include="2links.cs" />
+    <Compile Include="logevents.cs" />
+    <Compile Include="1logevents.cs" />
+    <Compile Include="2logevents.cs" />
+    <Compile Include="protectedtitles.cs" />
+    <Compile Include="1protectedtitles.cs" />
+    <Compile Include="2protectedtitles.cs" />
+    <Compile Include="querypage.cs" />
+    <Compile Include="1querypage.cs" />
+    <Compile Include="random.cs" />
+    <Compile Include="1random.cs" />
+    <Compile Include="recentchanges.cs" />
+    <Compile Include="1recentchanges.cs" />
+    <Compile Include="2recentchanges.cs" />
+    <Compile Include="revisions.cs" />
+    <Compile Include="1revisions.cs" />
+    <Compile Include="2revisions.cs" />
+    <Compile Include="search.cs" />
+    <Compile Include="1search.cs" />
+    <Compile Include="tags.cs" />
+    <Compile Include="1tags.cs" />
+    <Compile Include="templates.cs" />
+    <Compile Include="1templates.cs" />
+    <Compile Include="2templates.cs" />
+    <Compile Include="usercontribs.cs" />
+    <Compile Include="1usercontribs.cs" />
+    <Compile Include="2usercontribs.cs" />
+    <Compile Include="userinfo.cs" />
+    <Compile Include="users.cs" />
+    <Compile Include="1users.cs" />
+    <Compile Include="videoinfo.cs" />
+    <Compile Include="1videoinfo.cs" />
+    <Compile Include="watchlist.cs" />
+    <Compile Include="1watchlist.cs" />
+    <Compile Include="2watchlist.cs" />
+    <Compile Include="watchlistraw.cs" />
+    <Compile Include="1watchlistraw.cs" />
+    <Compile Include="2watchlistraw.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
