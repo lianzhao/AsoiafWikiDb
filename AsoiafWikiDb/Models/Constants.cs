@@ -10,6 +10,8 @@
     {
         public const string WikiSiteUri = "http://zh.asoiaf.wikia.com/wiki/";
 
+        public const string EnWikiSiteUri = "http://awoiaf.westeros.org/index.php/";
+
         public const string CategoryPrefix = "Category:";
 
         public static readonly int CategoryPrefixLength = CategoryPrefix.Length;
@@ -38,9 +40,14 @@
             }
         }
 
-        public static string ToWikiPageUri(this string pageTitle)
+        public static string ToWikiPageUri(this string pageTitle, string siteUri = WikiSiteUri)
         {
-            return string.Format("{0}{1}", WikiSiteUri, pageTitle);
+            return string.Format("{0}{1}", siteUri, pageTitle);
+        }
+
+        public static bool InCategory(this Page page, string category)
+        {
+            return page.categories.Select(c => c.title.ToCategoryTitleWithoutPrefix()).Contains(category);
         }
 
         public static bool InAnyCategories(this Page page, IEnumerable<string> categories)
@@ -59,7 +66,7 @@
         {
             if (langlink.lang == "en")
             {
-                return string.Format("{0}{1}", "http://awoiaf.westeros.org/index.php/", langlink.value);
+                return string.Format("{0}{1}", EnWikiSiteUri, langlink.value);
             }
             return null;
         }

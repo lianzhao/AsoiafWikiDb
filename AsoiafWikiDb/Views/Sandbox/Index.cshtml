@@ -1,0 +1,47 @@
+﻿@using System.Globalization
+@using AsoiafWikiDb.Models
+@using LinqToWiki.Generated.Entities
+@{
+    ViewBag.Title = "Sandbox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var categories = Repository.Instance.Categories.Where(c => c.info.pages > 0).Select(category =>
+        {
+            var c = category;
+            langlinksSelect en = null;
+            var page = Repository.Instance.Pages.FirstOrDefault(p => p.InCategory(c.info.value) && p.info.title == c.info.value);
+            if (page != null)
+            {
+                en = page.langlinks.FirstOrDefault(ll => ll.lang == "en");
+            }
+            return new { c, en };
+        }).Where(pair => pair.en != null).ToList();
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h4>@categories.Count.ToString(CultureInfo.InvariantCulture) categoies found</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Category</td>
+            <td>langlinks</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pair in categories)
+        {
+            <tr>
+                <td>
+                    <a href="@pair.c.info.value.ToCategoryTitleWithPrefix().ToWikiPageUri()">@pair.c.info.value</a>
+                </td>
+                <td>
+                    <a href="@pair.en.value.ToCategoryTitleWithPrefix().ToWikiPageUri(Constants.EnWikiSiteUri)">@pair.en.value</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
