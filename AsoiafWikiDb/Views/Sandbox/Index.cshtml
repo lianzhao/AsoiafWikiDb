@@ -29,6 +29,7 @@
         <tr>
             <td>Category</td>
             <td>langlinks</td>
+            <td>content</td>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +41,9 @@
                 </td>
                 <td>
                     <a href="@pair.en.value.ToCategoryTitleWithPrefix().ToWikiPageUri(Constants.EnWikiSiteUri)">@pair.en.value</a>
+                </td>
+                <td>
+                    <span>{{Noarticletext|@pair.en.value}}</span>
                 </td>
             </tr>
         }
