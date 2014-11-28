@@ -143,6 +143,7 @@
     <Compile Include="Models\CategoryIndexViewModel.cs" />
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\Hide.cs" />
+    <Compile Include="Models\MasterCode.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PageIndexViewModel.cs" />
     <Compile Include="Models\Redirect.cs" />
