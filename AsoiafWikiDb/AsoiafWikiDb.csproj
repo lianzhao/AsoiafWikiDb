@@ -147,13 +147,21 @@
     <Compile Include="Models\AdminModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryIndexViewModel.cs" />
+    <Compile Include="Models\categorymemberstypeConverter.cs" />
     <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\AsoiafWikiDbContext.cs" />
+    <Compile Include="Models\DbConfiguration.cs" />
+    <Compile Include="Models\EfRepository.cs" />
     <Compile Include="Models\Hide.cs" />
+    <Compile Include="Models\JsonCreationConverter.cs" />
     <Compile Include="Models\MasterCode.cs" />
+    <Compile Include="Models\NamespaceConverter.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PageIndexViewModel.cs" />
+    <Compile Include="Models\PrivateSetterContractResolver.cs" />
     <Compile Include="Models\Redirect.cs" />
     <Compile Include="Models\Repository.cs" />
+    <Compile Include="Models\WikiRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
